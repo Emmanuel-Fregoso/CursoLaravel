@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/holamundo/{nombre}', function ($nombre){
-    return view('prueba', compact('nombre'));
+Route::get('/prueba', function (){
+    return view('prueba');
 });
 
 Route::get('/otra', function (){
