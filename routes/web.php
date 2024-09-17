@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,4 @@ Route::get('/holamundo/{nombre}', function ($nombre){
     return view('prueba', compact('nombre'));
 });
 
-Route::get('/otra', function (){
-    return 'Otra ruta';
-})->name('otra');
+Route::get('/todos', [TodoController::class, 'obtenerTodos'])->name('todos');

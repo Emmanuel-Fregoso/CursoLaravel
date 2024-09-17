@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             ProyectoSeeder::class,
+            TodoSeeder::class,
         ]);
     }
 }

@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Proyecto extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
+    protected $fillable = ['nombre'];
+
+    public function todos()
+    {
+        return $this->hasMany(Todo::class);
+    }
+
 }
