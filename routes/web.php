@@ -22,4 +22,4 @@ Route::get('/holamundo/{nombre}', function ($nombre){
     return view('prueba', compact('nombre'));
 });
 
-Route::get('/todos', [TodoController::class, 'obtenerTodos'])->name('todos');
+Route::resource('todos', TodoController::class);
